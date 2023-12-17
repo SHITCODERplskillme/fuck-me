@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int a, b;
+	cout << "nhap a" << endl;
+	cin >> a;
+	cout << "nhap b:" << endl;
+	cin >> b;
+	if (a > b)
+	{
+		cout << "" << a << "la so lon nhat";
+	}
+	else
+	{
+		cout << b << "la so lon nhat"<<endl;
+	}
+	int n;
+	cout << "nhap n" << endl;
+	cin >> n;
+	for (int i = 1; n >= i; i++)
+	{
+		int cunt=n ;
+		
+		int count = i;
+		if (cunt% count == 0) { cout << "" << count; }
+	}
+
+	return 0;
