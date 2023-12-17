@@ -1,0 +1,26 @@
+
+#include<iostream>
+#include<string>
+using namespace std;
+class shitshow {
+private:
+	string sach;
+	double gia;
+	int soluong;
+	double thue = 0.10;
+public:
+	shitshow() {
+		cout << "nhap ten sach";
+		cin >> sach;
+		cout << "gia";
+		cin >> gia;
+		cout << "soluong";
+		cin >> soluong;
+	}
+	string tensach() const { return sach; }
+	double giatien() const { return gia; }
+	int sol()const { return soluong; }
+	double irs()const { return thue; }
+	double thanhtien() const { return soluong * gia; }
+
+};
