@@ -1,0 +1,20 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+	int main()
+	{
+		double dg;
+		double thue = 1.008;
+		cout << "nhap dg" << endl;
+		cin >> dg;
+		if (dg <= 1)
+			cout << "tienla" << dg * 20000 * thue;
+			if (dg <= 20)
+				cout << "tienla" << dg * 16000 * thue;
+			if (dg <= 150)
+				cout << "tienla" << dg * 14000 * thue;
+		if (dg > 150)
+		cout << "tienla" << dg * 14000 * thue *0.8 ;
+		return 0;
+	}
