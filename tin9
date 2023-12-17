@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+string ten;
+double luongngay;
+double luongthuong;
+int ngay;
+double hs;
+cout<<"ten";
+cin>>ten;
+cout<<"congngay";
+cin>>luongngay;
+cout<<"ngay";
+cin>>ngay;
+cout<<"luong thuong";
+cin>>luongthuong;
+cout<<"heso";
+cin>>hs;
+cout<<"luong la"<<luongngay+ngay<<endl;
+cout<<"luong thuong la"<<luongthuong*hs<<endl;
+    return 0;
+}
