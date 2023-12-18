@@ -1,0 +1,17 @@
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	int n;
+	double M=0;
+	cout << "nhap n";
+	cin >> n;
+	for(int i=1;i<n;i++)
+		{;
+		M += 1 / pow(i,4);
+	}
+	cout << M;
+	return 0;
+}
