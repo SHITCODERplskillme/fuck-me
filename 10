@@ -1,0 +1,67 @@
+
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Nhap so phan tu cua mang: ";
+    cin >> n;
+
+    float a[n];
+    cout << "Nhap cac phan tu cua mang: ";
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+    }
+
+    // Tinh tich cac phan tu o vi tri le
+    float tich = 1;
+    for (int i = 0; i < n; i += 2) {
+        tich *= a[i];
+    }
+    cout << "Tich cac phan tu o vi tri le: " << tich << endl;
+
+    // Sap xep mang theo thu tu giam dan
+    sort(a, a + n, greater<float>());
+    cout << "Mang sau khi sap xep giam dan: ";
+    for (int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+
+    // Tinh trung binh cong cac phan tu am
+    float tongAm = 0;
+    int demAm = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] < 0) {
+            tongAm += a[i];
+            demAm++;
+        }
+    }
+    if (demAm > 0) {
+        float tbAm = tongAm / demAm;
+        cout << "Trung binh cong cac phan tu am: " << tbAm << endl;
+    } else {
+        cout << "Khong co phan tu am trong mang" << endl;
+    }
+
+    // Tinh trung binh cong cac phan tu duong
+    float tongDuong = 0;
+    int demDuong = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] > 0) {
+            tongDuong += a[i];
+            demDuong++;
+        }
+    }
+    if (demDuong > 0) {
+        float tbDuong = tongDuong / demDuong;
+        cout << "Trung binh cong cac phan tu duong: " << tbDuong << endl;
+    } else {
+        cout << "Khong co phan tu duong trong mang" << endl;
+    }
+
+    return 0;
+}
